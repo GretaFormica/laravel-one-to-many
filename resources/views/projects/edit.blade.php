@@ -42,6 +42,16 @@
                            name="text"
                            value="{{ old('text') ?? $project->text }}">
                 </div>
+
+                <div class="form-group col-md-6">
+                    <label for="text">Tipo</label>
+                    <select class="form-select">
+                        <option value="">non categorizzato</option>
+                        @foreach ($types as $type)
+                            <option value=" {{ $type->id }}">{{ $type->label }}</option>
+                        @endforeach
+                    </select>
+                </div>
                 
             </div>
             
