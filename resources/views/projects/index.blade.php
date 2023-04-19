@@ -24,6 +24,7 @@
                         <h5 class="card-title">Titolo: {{ $project->title}}</h5>
                         <h5 class="card-title">Album: {{ $project->image}}</h5>
                         <h5 class="card-title">Autore: {{ $project->text}}</h5>
+                        <h5 class="card-title">Tipo: {{ $project->type?->label}}</h5>
                 
                         {{-- <a href="{{ route('music.show', ['music' => $music])}}">dettaglio</a> --}}
 
