@@ -18,14 +18,22 @@
         <form action="{{ route('projects.store') }}" method="POST">
             @csrf
         
-            <label for="name" class="form-label">titolo</label>
+            <label for="title" class="form-label">titolo</label>
             <input type="text" class="form-control" id="title" name="title" />
         
-            <label for="number" class="form-label">immagine</label>
+            <label for="image" class="form-label">immagine</label>
             <input type="text" class="form-control" id="image" name="image" />
         
-            <label for="type" class="form-label">text</label>
+            <label for="text" class="form-label">text</label>
             <input type="text" class="form-control" id="text" name="text" />
+
+            <label for="type_id" class="form-label">tipo</label>
+            <select name="type_id" class="form-select">
+                <option value="">non categorizzato</option>
+                @foreach ($types as $type)
+                    <option value=" {{ $type->id }}">{{ $type->label }}</option>
+                @endforeach
+            </select>
         
             <button type="submit" class="btn btn-primary">Salva</button>
         </form>
