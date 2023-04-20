@@ -45,7 +45,7 @@
 
                 <div class="form-group col-md-6">
                     <label for="type_id">Tipo</label>
-                    <select name="type_id" class="form-select">
+                    <select name="type_id" id="type_id" class="form-select">
                         <option value="">non categorizzato</option>
                         @foreach ($types as $type)
                             <option value=" {{ $type->id }}">{{ $type->label }}</option>
